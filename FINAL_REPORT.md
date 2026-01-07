@@ -1,6 +1,6 @@
 # Fynd AI Intern Assessment - Final Report
 
-**Author**: [Your Name]  
+**Author**: Gaurav Sahu  
 **Date**: January 2025  
 **Assessment**: Take Home Assessment 2.0
 
