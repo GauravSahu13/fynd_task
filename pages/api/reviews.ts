@@ -52,7 +52,7 @@ export default async function handler(
       ]);
 
       // Save to database
-      const reviewId = dbOperations.insertReview(
+      const reviewId = await dbOperations.insertReview(
         rating,
         review_text.trim(),
         aiResponse,
@@ -76,7 +76,7 @@ export default async function handler(
 
   if (req.method === 'GET') {
     try {
-      const reviews = dbOperations.getAllReviews();
+      const reviews = await dbOperations.getAllReviews();
       return res.status(200).json({ reviews });
     } catch (error: any) {
       console.error('Error fetching reviews:', error);
