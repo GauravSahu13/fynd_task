@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: fynd-ai-feedback-system
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: USE_OLLAMA
+        value: false
+      - key: GROK_API_KEY
+        sync: false
+      - key: OPENROUTER_API_KEY
+        sync: false
+
