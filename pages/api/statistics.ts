@@ -7,7 +7,7 @@ export default async function handler(
 ) {
   if (req.method === 'GET') {
     try {
-      const statistics = dbOperations.getStatistics();
+      const statistics = await dbOperations.getStatistics();
       return res.status(200).json(statistics);
     } catch (error: any) {
       console.error('Error fetching statistics:', error);
